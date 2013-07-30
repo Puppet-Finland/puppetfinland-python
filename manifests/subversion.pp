@@ -1,13 +1,12 @@
 #
 # == Class: python::subversion
 #
-# Setup SVN support for Python. We wouldn't strictly need to include 
-# 'subversion' as the package management should install it automatically.
+# Setup SVN support for Python.
 #
 class python::subversion {
 
     include python
-    include subversion
+    include python::params
 
     package { 'python-python-subversion':
         name => "${::python::params::python_subversion_package_name}",
