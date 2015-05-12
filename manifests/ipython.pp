@@ -15,26 +15,26 @@ class python::ipython
 )
 {
 
-    include python
-    include python::params
+    include ::python
+    include ::python::params
 
     if $use_pip == 'no' {
 
         package { 'python-python-ipython':
-            name => "${::python::params::python_ipython_package_name}",
-            ensure => installed,
+            ensure  => installed,
+            name    => $::python::params::python_ipython_package_name,
             require => Class['python::install'],
         }
 
     } else {
 
-        include python::pip
+        include ::python::pip
 
         package { 'python-python-ipython':
-            name => "${::python::params::python_ipython_pip_package_name}",
-            ensure => present,
+            ensure   => present,
+            name     => $::python::params::python_ipython_pip_package_name,
             provider => pip,
-            require => Class['python::install','python::pip'],
+            require  => Class['python::install','python::pip'],
         }
     }
 }

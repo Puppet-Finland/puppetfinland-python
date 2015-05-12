@@ -3,6 +3,11 @@
 #
 # This is a dummy class. The actual work is done in the subclasses.
 #
+# == Parameters
+#
+# [*manage*]
+#   Manage Python using Puppet. Valid values are 'yes' (default) and 'no'.
+#
 # == Authors
 #
 # Samuli Seppänen <samuli.seppanen@gmail.com>
@@ -15,10 +20,13 @@
 #
 # BSD-license. See file LICENSE for details.
 #
-class python {
+class python
+(
+     $manage = 'yes'
+)
+{
 
-# Rationale for this is explained in init.pp of the sshd module
-if hiera('manage_python', 'true') != 'false' {
-    include python::install
+if $manage == 'yes' {
+    include ::python::install
 }
 }

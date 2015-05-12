@@ -5,12 +5,12 @@
 #
 class python::crypto {
 
-    include python
-    include python::params
+    include ::python
+    include ::python::params
 
     package { 'python-python-crypto':
-        name => "${::python::params::python_crypto_package_name}",
-        ensure => installed,
+        ensure  => installed,
+        name    => $::python::params::python_crypto_package_name,
         require => Class['python::install'],
     }
 }

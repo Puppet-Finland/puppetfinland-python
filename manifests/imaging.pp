@@ -5,12 +5,12 @@
 #
 class python::imaging {
 
-    include python
-    include python::params
+    include ::python
+    include ::python::params
 
     package { 'python-python-imaging':
-        name => "${::python::params::python_imaging_package_name}",
-        ensure => installed,
+        ensure  => installed,
+        name    => $::python::params::python_imaging_package_name,
         require => Class['python::install'],
     }
 }

@@ -5,12 +5,12 @@
 #
 class python::psycopg2 {
 
-    include python
-    include python::params
+    include ::python
+    include ::python::params
 
     package { 'python-python-psycopg2':
-        name => "${::python::params::python_psycopg2_package_name}",
-        ensure => installed,
+        ensure  => installed,
+        name    => $::python::params::python_psycopg2_package_name,
         require => Class['python'],
     }
 }

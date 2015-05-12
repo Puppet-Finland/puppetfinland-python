@@ -1,0 +1,12 @@
+{
+  "name": "puppetfinland-python",
+  "version": "0.5.1",
+  "author": "Puppet-Finland team",
+  "license": "BSD license",
+  "summary": "Setup python",
+  "source": "https://github.com/Puppet-Finland/python.git",
+  "project_page": "https://github.com/Puppet-Finland/python",
+  "dependencies": [
+    { "name": "puppetfinland/gettext", "version_requirement": ">= 0.1.0" }
+  ]
+}

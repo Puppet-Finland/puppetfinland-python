@@ -5,12 +5,12 @@
 #
 class python::subversion {
 
-    include python
-    include python::params
+    include ::python
+    include ::python::params
 
     package { 'python-python-subversion':
-        name => "${::python::params::python_subversion_package_name}",
-        ensure => installed,
+        ensure  => installed,
+        name    => $::python::params::python_subversion_package_name,
         require => Class['python'],
     }
 }

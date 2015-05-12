@@ -8,14 +8,14 @@
 #
 class python::apt {
 
-    if $::osfamily == "Debian" {
+    if $::osfamily == 'Debian' {
 
-        include python
-        include python::params
+        include ::python
+        include ::python::params
 
         package { 'python-python-apt':
-            name => "${::python::params::python_apt_package_name}",
-            ensure => installed,
+            ensure  => installed,
+            name    => $::python::params::python_apt_package_name,
             require => Class['python::install'],
         }
     }

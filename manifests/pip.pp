@@ -10,11 +10,11 @@
 #
 class python::pip {
 
-    include python
+    include ::python
 
     package { 'python-python-pip':
-        name => "${::python::params::python_pip_package_name}",
-        ensure => installed,
+        ensure  => installed,
+        name    => $::python::params::python_pip_package_name,
         require => Class['python'],
     }
 }
