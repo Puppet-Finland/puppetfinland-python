@@ -22,7 +22,7 @@
 #
 class python
 (
-     $manage = 'yes'
+    $manage = 'yes'
 )
 {
 
