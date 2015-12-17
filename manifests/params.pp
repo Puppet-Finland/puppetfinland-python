@@ -23,6 +23,7 @@ class python::params {
             $python_virtualenv_package_name = 'python-virtualenv'
             $python_ipython_package_name = 'ipython'
             $python_pip_package_name = 'python-pip'
+            $python_boto_package_name = 'python-boto'
         }
         'Debian': {
             $python_package_name = 'python'
@@ -37,6 +38,7 @@ class python::params {
             $python_ipython_package_name = 'ipython'
             $python_pip_package_name = 'python-pip'
             $python_apt_package_name = 'python-apt'
+            $python_boto_package_name = 'python-boto'
         }
         default: {
             fail("Unsupported operating system ${::osfamily}")
