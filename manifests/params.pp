@@ -8,6 +8,7 @@ class python::params {
     # Pip package names - these are OS-independent
     $python_virtualenv_pip_package_name = 'virtualenv'
     $python_ipython_pip_package_name = 'ipython'
+    $python_boto_pip_package_name = 'boto'
 
     # OS-specific variables
     case $::osfamily {
