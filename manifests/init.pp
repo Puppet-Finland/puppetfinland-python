@@ -6,7 +6,7 @@
 # == Parameters
 #
 # [*manage*]
-#   Manage Python using Puppet. Valid values are 'yes' (default) and 'no'.
+#   Manage Python using Puppet. Valid values are true (default) and false.
 #
 # == Authors
 #
@@ -22,11 +22,13 @@
 #
 class python
 (
-    $manage = 'yes'
+    $manage = true
 )
 {
 
-if $manage == 'yes' {
+validate_bool($manage)
+
+if $manage {
     include ::python::install
 }
 }
