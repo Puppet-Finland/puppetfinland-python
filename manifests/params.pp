@@ -41,6 +41,9 @@ class python::params {
             $python_apt_package_name = 'python-apt'
             $python_boto_package_name = 'python-boto'
         }
+        'FreeBSD': {
+            $python_package_name = 'python'
+        }
         default: {
             fail("Unsupported operating system ${::osfamily}")
         }
