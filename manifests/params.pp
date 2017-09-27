@@ -25,6 +25,7 @@ class python::params {
             $python_ipython_package_name = 'ipython'
             $python_pip_package_name = 'python-pip'
             $python_boto_package_name = 'python-boto'
+            $python_django_package_name = 'python-django'
         }
         'Debian': {
             $python_package_name = 'python'
@@ -40,6 +41,7 @@ class python::params {
             $python_pip_package_name = 'python-pip'
             $python_apt_package_name = 'python-apt'
             $python_boto_package_name = 'python-boto'
+            $python_django_package_name = 'python-django'
         }
         'FreeBSD': {
             $python_package_name = 'python'
