@@ -26,6 +26,7 @@ class python::params {
             $python_pip_package_name = 'python-pip'
             $python_boto_package_name = 'python-boto'
             $python_django_package_name = 'python-django'
+            $python_ldap_package_name = 'python-ldap'
         }
         'Debian': {
             $python_package_name = 'python'
@@ -42,6 +43,7 @@ class python::params {
             $python_apt_package_name = 'python-apt'
             $python_boto_package_name = 'python-boto'
             $python_django_package_name = 'python-django'
+            $python_ldap_package_name = 'python-ldap'
         }
         'FreeBSD': {
             $python_package_name = 'python'
