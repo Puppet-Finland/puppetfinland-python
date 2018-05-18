@@ -2,7 +2,7 @@
   "name": "puppetfinland-python",
   "version": "1.2.0",
   "author": "Puppet-Finland team",
-  "license": "BSD license",
+  "license": "BSD-2-Clause",
   "summary": "Setup python",
   "source": "https://github.com/Puppet-Finland/python.git",
   "project_page": "https://github.com/Puppet-Finland/python",
